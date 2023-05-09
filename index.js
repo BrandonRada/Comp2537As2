@@ -18,13 +18,13 @@ const Joi = require("joi");
 const expireTime = 24 * 60 * 60 * 1000; //expires after 1 day  (hours * minutes * seconds * millis)
 
 /* secret information section */
-const mongodb_host = "cluster0.vsnudks.mongodb.net";
-const mongodb_user = "user1";
-const mongodb_password = "Strongholdminer12";
-const mongodb_database = "bobsData";
-const mongodb_session_secret = "f03db5da-0fae-486f-b984-9cb21d39d3d4";
+const mongodb_host = process.env.MONGODB_HOST;
+const mongodb_user = process.env.MONGODB_USER;
+const mongodb_password = process.env.MONGODB_PASSWORD;
+const mongodb_database = process.env.MONGODB_DATABASE;
+const mongodb_session_secret = process.env.MONGODB_SESSION_SECRET;
 
-const node_session_secret = "39c3e734-7a37-43ce-9609-7f9aacac9369";
+const node_session_secret = process.env.NODE_SESSION_SECRET;
 /* END secret section */
 
 var {database} = include('databaseConnection');
