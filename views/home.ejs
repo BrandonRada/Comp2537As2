@@ -1,0 +1,10 @@
+<%- include("templates/header") %> 
+<% if (!isLoggedIn) { %>
+    <button onclick="location.href='/createUser'">Sign Up</button>
+    <button onclick="location.href='/login'">Login</button>
+  <% } else { %>
+    <h1>Hello, <%= userName %>!</h1>
+    <button onclick="location.href='/members'">Go to Members Area</button>
+    <button onclick="location.href='/logout'">Logout</button>
+  <% } %>
+  <%- include("templates/footer") %>

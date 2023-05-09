@@ -1,0 +1,11 @@
+<%- include("templates/header") %> 
+Welcome, <%= user %>!
+<br>
+<div class="row mb-3 text-center">
+    <img class="col-6 col-md-4 themed-grid-col" src="/cat0.jpg"></img>
+    <img class="col-6 col-md-4 themed-grid-col" src="/cat1.jpg"></img>
+    <img class="col-6 col-md-4 themed-grid-col" src="/cat2.jpg"></img>
+  </div>
+<br>
+<button onclick="location.href='/logout'">Logout</button>
+<%- include("templates/footer") %>

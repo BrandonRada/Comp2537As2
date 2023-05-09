@@ -1,0 +1,13 @@
+<%- include("templates/header") %> 
+<% if (userType == "admin") { %>
+    <% let i=0; %>
+    <% for(i=0; i < users.length; i++) { %>
+    <%- include('templates/user', {user: users[i]}) %> 
+    <% } %> 
+<% } else { %>
+    <h1>Access denied, not an Admin/h1>
+        <br>
+    <button onclick="location.href='/members'">Go to Home</button>
+    
+<% } %>
+<%- include("templates/footer") %>
